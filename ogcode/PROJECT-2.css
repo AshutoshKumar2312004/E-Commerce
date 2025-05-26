@@ -1,0 +1,97 @@
+*{
+    margin: 0px;
+}
+
+nav{
+    background-color: black;
+    color: white;
+    padding: 15px;
+}
+
+ul{
+    display: inline-block;
+    margin-left: 73%;
+     cursor: pointer;
+} 
+
+li{
+    display: inline-block;
+    color: gray;
+}
+
+li:hover{
+    color: white;
+}
+
+h1{
+    display: inline-block;
+}
+
+.zero{
+    text-align: center;
+}
+ 
+input{
+    width: 50%;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.one{
+  border-color: black;
+  border-width: 3px;
+  border-style: solid;
+  display: inline-block;
+  margin-top: 50px;
+  width: 250px;
+}
+
+.two{
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    display: inline-block;
+    margin-top: 50px;
+    width: 250px;
+}
+
+.three{
+    border-color: black;
+    border-width: 3px;
+    border-style: solid;
+    display: inline-block;
+    margin-top: 50px;
+    width: 250px;
+}
+
+.one:hover{
+    color: white;
+    background-color: black;
+}
+
+.two:hover{
+    color: white;
+    background-color: black;
+}
+
+.three:hover{
+    color: white;
+    background-color: black;
+}
+
+.five{
+    margin-top: 50px;
+}
+
+.six{
+   text-align: center;
+   background-color: black;
+   color: white; 
+   margin-top: 30px;
+}
+
+.seven{
+    margin-top: 40px;
+    font-size: 10px;
+    color: grey;
+}

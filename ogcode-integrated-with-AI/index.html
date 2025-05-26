@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumy - Premium Fragrances</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="logo">Perfumy</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="Search perfumes...">
+                    <button id="searchBtn">🔍</button>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    🛒
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Discover Your Signature Scent</h1>
+            <p class="hero-subtitle">Premium fragrances for the modern individual</p>
+            <button class="cta-button" onclick="scrollToProducts()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Collection</h2>
+            
+            <!-- Filter Options -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="men">Men</button>
+                <button class="filter-btn" data-filter="women">Women</button>
+                <button class="filter-btn" data-filter="unisex">Unisex</button>
+            </div>
+
+            <div class="products-grid" id="productsGrid">
+                <!-- Product 1 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="villian hydra.jpg" alt="Villain Hydra" data-product="villain-hydra">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">men</span>
+                        <h3>Villain Hydra</h3>
+                        <p class="product-description">All New Intense Hydra For a Fresh Start Every Morning. Experience the ultimate masculine fragrance.</p>
+                        <div class="product-price">₹2,499</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(1)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(1)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="Villain desire.webp" alt="Villain Desire" data-product="villain-desire">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">men</span>
+                        <h3>Villain Desire</h3>
+                        <p class="product-description">All New Villain Desire For The Perfect Date With Your Perfect Partner. Ignite passion with every spray.</p>
+                        <div class="product-price">₹2,799</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(2)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(2)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="villian snake.jpg" alt="Villain Snake" data-product="villain-snake">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">men</span>
+                        <h3>Villain Snake</h3>
+                        <p class="product-description">All New Villain Snake For The Best Fight In Your Everyday Life. Unleash your inner warrior.</p>
+                        <div class="product-price">₹2,999</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(3)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(3)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="mystic rose.jpg" alt="Mystic Rose" data-product="mystic-rose">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">women</span>
+                        <h3>Mystic Rose</h3>
+                        <p class="product-description">Elegant and sophisticated fragrance for the modern woman. Captivate with every breath.</p>
+                        <div class="product-price">₹3,299</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(4)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(4)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card" data-category="unisex">
+                    <div class="product-image">
+                        <img src="ocean breaze.webp" alt="Ocean Breeze" data-product="ocean-breeze">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">unisex</span>
+                        <h3>Ocean Breeze</h3>
+                        <p class="product-description">Fresh oceanic scent perfect for any occasion. Feel the freedom of the open sea.</p>
+                        <div class="product-price">₹2,899</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(5)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(5)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card" data-category="women">
+                    <div class="product-image">
+                        <img src="golden hour.webp" alt="Golden Hour" data-product="golden-hour">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">women</span>
+                        <h3>Golden Hour</h3>
+                        <p class="product-description">Warm and luxurious fragrance that captures the magic of sunset. Embrace your golden moments.</p>
+                        <div class="product-price">₹3,499</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(6)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(6)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 7 -->
+                <div class="product-card" data-category="men">
+                    <div class="product-image">
+                        <img src="midnight storm.jpg" alt="Midnight Storm" data-product="midnight-storm">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">men</span>
+                        <h3>Midnight Storm</h3>
+                        <p class="product-description">Powerful and intense fragrance for the bold and fearless. Command attention wherever you go.</p>
+                        <div class="product-price">₹3,199</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(7)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(7)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 8 -->
+                <div class="product-card" data-category="unisex">
+                    <div class="product-image">
+                        <img src="pure essence.jpg" alt="Pure Essence" data-product="pure-essence">
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">unisex</span>
+                        <h3>Pure Essence</h3>
+                        <p class="product-description">Clean and pure fragrance that embodies simplicity and elegance. Perfect for everyday wear.</p>
+                        <div class="product-price">₹2,699</div>
+                        <div class="product-actions">
+                            <button class="btn-secondary" onclick="viewProduct(8)">View Details</button>
+                            <button class="btn-primary" onclick="addToCart(8)">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title">WHO ARE WE</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Unapologetic, unabashed and unafraid, Villain is made for the men who are true to themselves and their style, however twisted it may be. Even a good man can turn bad when crisis comes knocking and for that man who's bold, bad & ready for it all… we have Villain.</p>
+                    
+                    <p>A celebration of the antagonist that lies amongst all of us, Villain is here to offer in-your-face, bold and stylish products that invoke an intriguing and sexy demeanor and break the trend.</p>
+                    
+                    <p>We offer a range of fragrances, apparels and accessories, each masculine and unique in its own way. From perfumes, sunglasses, gym-wear, hoodies, men's jewelry, boxers and much more, the brand has introduced clutter-breaking products with unique USPs that would appeal to the youth of India and its ever-evolving needs.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>100+</h3>
+                        <p>Premium Fragrances</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50K+</h3>
+                        <p>Happy Customers</p>
+                    </div>
+                    <div class="stat">
+                        <h3>5★</h3>
+                        <p>Customer Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <h4>📞 Phone</h4>
+                        <p>+91 8964327172</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📧 Email</h4>
+                        <p>perfumypulla@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>📍 Address</h4>
+                        <p>123 Fragrance Street, Mumbai, India</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <input type="text" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea placeholder="Your Message" rows="5" required></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Shopping Cart</h2>
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cartItems"></div>
+                <div class="cart-total">
+                    <h3>Total: ₹<span id="cartTotal">0</span></h3>
+                </div>
+                <div class="cart-actions">
+                    <button id="clearCart" class="btn-secondary">Clear Cart</button>
+                    <button id="checkout" class="btn-primary">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Detail Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+            </div>
+            <div class="modal-body" id="productModalBody">
+                <!-- Product details will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Perfumy</h3>
+                    <p>Your destination for premium fragrances</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">📘</a>
+                        <a href="#">📷</a>
+                        <a href="#">🐦</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Perfumy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
